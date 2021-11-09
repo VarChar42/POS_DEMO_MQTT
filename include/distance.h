@@ -1,0 +1,4 @@
+
+void setupDistanceCalculation();
+
+float calculateDistance();
