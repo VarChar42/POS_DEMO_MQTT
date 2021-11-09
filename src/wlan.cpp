@@ -4,7 +4,6 @@
 
 void setupWlan()
 {
-
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
     Serial.println("Connecting to WiFi ");

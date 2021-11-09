@@ -20,16 +20,14 @@ void setup()
   analogWrite(LED_PIN, 255);
 }
 
-
-
 void loop()
 {
-
   float distance = calculateDistance();
 
-  if (distance > 300) return;
+  if (distance > 300)
+    return;
 
   sendDistanceData(distance);
-  
+
   delay(1000);
 }

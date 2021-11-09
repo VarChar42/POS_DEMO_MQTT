@@ -12,7 +12,6 @@ void setupDistanceCalculation()
 
 float calculateDistance()
 {
-
     digitalWrite(TRIGGER_PIN, LOW);
     delayMicroseconds(2);
     digitalWrite(TRIGGER_PIN, HIGH);
