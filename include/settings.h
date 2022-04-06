@@ -1,8 +1,8 @@
 
-#define WIFI_SSID       "wlanunddukaustnixdagegenmochn"
-#define WIFI_PASSWORD   "pwunddukaustnixdagegenmochn"
+#define WIFI_SSID       "ssid"
+#define WIFI_PASSWORD   "pw"
 
-#define MQTT_SERVER "10.0.0.42"
+#define MQTT_SERVER "192.168.1.42"
 #define MQTT_PORT   1883
 #define MQTT_ID     "MrDistanceCollector"
-#define MQTT_TOPIC  "data/distance"
+#define MQTT_TOPIC  "demo/data"

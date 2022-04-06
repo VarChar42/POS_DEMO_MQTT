@@ -1,4 +1,3 @@
 
 void setupMqtt();
-
-void sendDistanceData(float distance);
+void sendData(const char* name, float distance);

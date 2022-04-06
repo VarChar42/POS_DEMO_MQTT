@@ -7,27 +7,29 @@
 
 #define LED_PIN D4
 
+bool light = false;
+
 void setup()
 {
   Serial.begin(115200);
+  Serial.println("Starting...");
+  pinMode(A0, INPUT);
   pinMode(LED_PIN, OUTPUT);
-  analogWrite(LED_PIN, 0);
+  analogWrite(LED_PIN, 0);  
 
-  setupDistanceCalculation();
   setupWlan();
   setupMqtt();
 
-  analogWrite(LED_PIN, 255);
+  
 }
 
 void loop()
 {
-  float distance = calculateDistance();
+  analogWrite(LED_PIN, 0);
+  delay(50);
+  float value = analogRead(A0);
 
-  if (distance > 300)
-    return;
-
-  sendDistanceData(distance);
-
-  delay(1000);
+  analogWrite(LED_PIN, 100);
+  sendData("light", value);
+  delay(50);
 }

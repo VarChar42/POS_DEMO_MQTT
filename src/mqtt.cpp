@@ -28,11 +28,11 @@ void setupMqtt()
     }
 }
 
-void sendDistanceData(float distance)
+void sendData(const char* name, float distance)
 {
     DynamicJsonDocument doc(256);
     char buffer[128];
-    doc["distance"] = distance;
+    doc[name] = distance;
     size_t n = serializeJson(doc, buffer);
 
     client.publish(MQTT_TOPIC, buffer, n);
